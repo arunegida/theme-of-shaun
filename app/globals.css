@@ -169,6 +169,37 @@
   --color-primary-main: var(--palette-primary-main);
   --color-primary-dark: var(--palette-primary-dark);
   --color-primary-darker: var(--palette-primary-darker);
+
+  --color-secondary-lighter: var(--palette-secondary-lighter);
+  --color-secondary-light: var(--palette-secondary-light);
+  --color-secondary-main: var(--palette-secondary-main);
+  --color-secondary-dark: var(--palette-secondary-dark);
+  --color-secondary-darker: var(--palette-secondary-darker);
+
+  --color-info-lighter: var(--palette-info-lighter);
+  --color-info-light: var(--palette-info-light);
+  --color-info-main: var(--palette-info-main);
+  --color-info-dark: var(--palette-info-dark);
+  --color-info-darker: var(--palette-info-darker);
+
+  --color-success-lighter: var(--palette-success-lighter);
+  --color-success-light: var(--palette-success-light);
+  --color-success-main: var(--palette-success-main);
+  --color-success-dark: var(--palette-success-dark);
+  --color-success-darker: var(--palette-success-darker);
+  
+  --color-warning-lighter: var(--palette-warning-lighter);
+  --color-warning-light: var(--palette-warning-light);
+  --color-warning-main: var(--palette-warning-main);
+  --color-warning-dark: var(--palette-warning-dark);
+  --color-warning-darker: var(--palette-warning-darker);
+
+  --color-error-lighter: var(--palette-error-lighter);
+  --color-error-light: var(--palette-error-light);
+  --color-error-main: var(--palette-error-main);
+  --color-error-dark: var(--palette-error-dark);
+  --color-error-darker: var(--palette-error-darker);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
