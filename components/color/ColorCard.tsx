@@ -1,51 +1,13 @@
 import React from "react";
 
 import { Card, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  colorPaletteSecondary,
-  greenVars,
-  redVars,
-} from "./color-shades/colorPalette";
-import { cva } from "class-variance-authority";
+import { colorPaletteSecondary } from "./color-shades/colorPalette";
 import { useTheme } from "../context/ThemeContext";
+import { colorPalettes, presets } from "@/theme/colors";
 
-function hexToRgb(hex: string) {
-  const bigint = parseInt(hex.slice(1), 16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  return `${r} ${g} ${b}`;
-}
-
-function generatePaletteObject(
-  paletteName: string,
-  colorVars: { variable: any; hex: any }[]
-) {
-  const steps = ["lighter", "light", "main", "dark", "darker"];
-
-  const palette: { [key: string]: any } = {};
-
-  steps.forEach((step, index) => {
-    const { variable, hex } = colorVars[index];
-    palette[step] = {
-      name: step.charAt(0).toUpperCase() + step.slice(1),
-      var: `bg-[var(${variable})]`,
-      hex: hex,
-      rgb: hexToRgb(hex),
-    };
-  });
-
-  return { [paletteName]: palette };
-}
-const colorPalettes = {
-  ...generatePaletteObject("green", greenVars),
-  ...generatePaletteObject("red", redVars),
-};
 const ColorCard = () => {
   const secondaryColorPalette = colorPaletteSecondary;
-  console.log(secondaryColorPalette);
   const { theme } = useTheme();
-  const colorPalette = colorPalettes[theme as keyof typeof colorPalettes];
 
   return (
     <div className="pt-10">
@@ -56,22 +18,26 @@ const ColorCard = () => {
           </CardHeader>
 
           <div className="min-w-[70%] flex p-6 flex-wrap">
-            {Object.entries(colorPalette).map(([key, value], index) => {
+            {Object.entries(colorPalettes).map(([key, value], index) => {
+              const color = presets[theme as keyof typeof presets][key];
               return (
-                <div key={index} className={`h-max w-[30%] ${value.var} `}>
+                <div
+                  key={index}
+                  className={`h-max w-[30%] ${value}`}
+                >
                   <div className="p-[1rem] text-xs">
-                    <span className="font-bold text-xs">{value.name}</span>
+                    <span className="font-bold text-xs">{color.name}</span>
                     <div className="pt-3">
                       <div className="font-thin text-[8px]">Var</div>
-                      <div className="text-[8px]">{value.var}</div>
+                      <div className="text-[8px]">{color.var}</div>
                     </div>
                     <div className="pt-3">
                       <div className="font-thin text-[8px]">Hex</div>
-                      <div className="text-[8px]">{value.hex}</div>
+                      <div className="text-[8px]">{color.hex}</div>
                     </div>
                     <div className="pt-3">
                       <div className="font-thin text-[8px]">Rgb</div>
-                      <div className="text-[8px]">{value.rgb}</div>
+                      <div className="text-[8px]">{color.rgb}</div>
                     </div>
                   </div>
                 </div>

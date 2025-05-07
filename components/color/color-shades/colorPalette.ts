@@ -1,19 +1,4 @@
-// main colors
-export const greenVars = [
-  { variable: "--palette-primary-lighter", hex: "#C8FAD6" },
-  { variable: "--palette-primary-light", hex: "#5BE49B" },
-  { variable: "--palette-primary-main", hex: "#00A76F" },
-  { variable: "--palette-primary-dark", hex: "#007867" },
-  { variable: "--palette-primary-darker", hex: "#004B50" },
-];
 
-export const redVars = [
-  { variable: "--palette-primary-lighter", hex: "#FAD4D4" },
-  { variable: "--palette-primary-light", hex: "#F57C7C" },
-  { variable: "--palette-primary-main", hex: "#D32F2F" },
-  { variable: "--palette-primary-dark", hex: "#A62828" },
-  { variable: "--palette-primary-darker", hex: "#7A1C1C" },
-];
 
 // secondary main colors
 export const colorPaletteSecondary = {
