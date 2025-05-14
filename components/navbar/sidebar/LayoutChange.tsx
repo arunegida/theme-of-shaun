@@ -9,7 +9,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useTheme } from "@/components/context/ThemeContext";
-
+import Font from "./Font";
 const LayoutChange = () => {
   const { setTheme } = useTheme();
   return (
@@ -18,7 +18,7 @@ const LayoutChange = () => {
         <SheetTrigger>
           <Settings />
         </SheetTrigger>
-        <SheetContent>
+        <SheetContent className="w-[46%]">
           <SheetHeader>
             <div className="relative border border-gray-400 rounded-md p-4 mt-4">
               <SheetTitle>
@@ -67,6 +67,7 @@ const LayoutChange = () => {
                 </Button>
               </SheetDescription>
             </div>
+            <Font />
           </SheetHeader>
         </SheetContent>
       </Sheet>

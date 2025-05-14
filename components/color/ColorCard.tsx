@@ -27,7 +27,7 @@ const ColorCard = () => {
       <div className="flex justify-center items-center flex-col gap-8">
         <Card className="w-[50%] min-h-7/12">
           <CardHeader>
-            <CardTitle className="font-bold">Primary</CardTitle>
+            <CardTitle className="font-bold font-poppins">Primary</CardTitle>
           </CardHeader>
           <div className="min-w-[70%] h-[100%] grid grid-flow-row grid-cols-3 p-6">
             {Object.entries(colorPalettes).map(([key, value], index) => {

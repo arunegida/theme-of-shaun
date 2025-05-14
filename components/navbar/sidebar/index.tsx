@@ -1,5 +1,4 @@
 import LayoutChange from "./LayoutChange";
-
 const SideBar = () => {
   return (
     <div>
